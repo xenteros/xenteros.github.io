@@ -13,6 +13,11 @@ p {
     line-height: 1.75
 }
 
+hr {
+    border-color: #ff0178;
+    border-width: 0.20rem
+}
+
 a {
     color: #0b0f45
 }
@@ -23,6 +28,10 @@ a:hover {
 
 .text-primary {
     color: #8f065a!important
+}
+
+.text-marine {
+    color: #0b0f45
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -707,4 +716,12 @@ ul.social-buttons li a {
 
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
     background-color: #ff0178
+}
+
+.expandable { 
+    transition: all .2s ease-in-out 
+}
+
+.expandable:hover { 
+    transform: scale(1.1); 
 }
