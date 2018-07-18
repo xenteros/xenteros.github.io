@@ -152,7 +152,7 @@ img::-moz-selection {
 
 #mainNav .navbar-brand {
     color: #fff;
-    font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive
+    font-family: 'Asap', 'Helvetica Neue', Helvetica, Arial, cursive
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -201,7 +201,12 @@ img::-moz-selection {
 header.masthead {
     text-align: center;
     color: #fff;
-    background-image: url(../img/header-bg.jpg);
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(to bottom, #00000059 60%, #36454fcc 100%), url("../img/header-bg.jpg") no-repeat;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #00000059 60%, #36454fcc 100%), url("../img/header-bg.jpg") no-repeat;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -221,7 +226,7 @@ header.masthead .intro-text .intro-lead-in {
     font-style: italic;
     line-height: 22px;
     margin-bottom: 25px;
-    font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif
+    font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif
 }
 
 header.masthead .intro-text .intro-heading {
@@ -301,7 +306,7 @@ header.masthead .intro-text .intro-heading {
     position: relative;
     border-bottom: 1px solid #8f065a;
     color: #fff;
-    background: #232657 
+    background: #232657
 }
   
 .pricingdiv ul.theplan li.title {
