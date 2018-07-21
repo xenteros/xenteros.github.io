@@ -205,7 +205,10 @@ header.masthead {
     color: #fff;
     padding-top: 10rem;
     padding-bottom: calc(10rem - 56px);
-    background-image: url("../img/header-bg.jpg");
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: -webkit-linear-gradient(to bottom, #00000059 60%, #36454fcc 100%), url("../img/header-bg.jpg");
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #00000059 60%, #36454fcc 100%), url("../img/header-bg.jpg");
     background-position: center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
