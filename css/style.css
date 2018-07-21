@@ -60,7 +60,7 @@ section h3.section-subheading {
 
 @media (min-width:768px) {
     section {
-        padding: 150px 0
+        padding: 100px 0
     }
 }
 
@@ -91,11 +91,13 @@ section h3.section-subheading {
 
 ::-moz-selection {
     background: #8f065a;
+    color: #fff;
     text-shadow: none
 }
 
 ::selection {
     background: #8f065a;
+    color: #fff;
     text-shadow: none
 }
 
@@ -495,11 +497,11 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
 :root {
-    --hex-width: 10rem; 
-    --hex-between: 0.3rem;
+    --hex-width: 20rem; 
+    --hex-between: 0.1rem;
     
     --hex-height: calc(var(--hex-width) / 1.73 /* sqrt(3) */);
-    --hex-margin: calc(var(--hex-width) / 2);
+    --hex-margin: calc(var(--hex-width) / 10);
     --hex-border: calc(var(--hex-margin) / 1.73 /* sqrt(3) */);
     --hex-transition: all .2s ease;
     
@@ -508,68 +510,30 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
     --color-dark-purple: #0b0f45;
     --color-light-purple:#8f065a;
     --color-pink:        #ff0178;
-    --color-light-pink:  #ff5aa7
-}
-  
-.hexagon-container {
-    display: grid;
-    grid-template-columns: var(--hex-width) var(--hex-width) var(--hex-width) var(--hex-width);
-    grid-auto-rows: calc(var(--hex-width) - 28.87px/2);
-    grid-gap: var(--hex-between) var(--hex-between);
-    padding-bottom: var(--hex-border)
 }
 
-.hexagon {
+.square {
     align-items: center;
     background-color: var(--color-hex-default);
     cursor: pointer;
     display: flex;
-    fill: #fff;
+    color: #e9ecef;
     height: var(--hex-height);
     justify-content: center;
     margin: var(--hex-border) 0;
     position: relative;
     transition: var(--hex-transition);
-    width: var(--hex-width)
-}
-  
-.hexagon::after, .hexagon::before {
-    border-left: var(--hex-margin) solid transparent;
-    border-right: var(--hex-margin) solid transparent;
-    content: "";
-    left: 0;
-    position: absolute;
-    transition: var(--hex-transition);
-    width: 0
+    width: var(--hex-width);
 }
 
-.hexagon::after {
-    border-top: var(--hex-border) solid var(--color-hex-default);
-    top: 100%;
-    width: 0
-}
-  
-.hexagon::before {
-    border-bottom: var(--hex-border) solid var(--color-hex-default);
-    bottom: 100%
-}
-    
-.hexagon:hover {
-    background-color: var(--color-hex-hover)
+.square:hover {
+    background-color: var(--color-hex-hover);
+    text-decoration: none
 }
 
-.hexagon:hover::after, .hexagon:hover::before {
+.square:hover::after, .square:hover::before {
     border-top-color: var(--color-hex-hover);
     border-bottom-color: var(--color-hex-hover)
-}
-   
-.hexagon:nth-child(8n + 5), .hexagon:nth-child(8n + 6), .hexagon:nth-child(8n + 7), .hexagon:nth-child(8n + 8) {
-    margin-left: calc(var(--hex-width) / 2 + var(--hex-between) / 2)
-}
-  
-.hexagon > svg {
-    height: 75%;
-    transition: var(--hex-transition)
 }
   
 .color-dark-purple {
@@ -610,27 +574,6 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 .color-pink:hover {
     color: var(--color-pink)
 }
-
-.color-light-pink {
-    background-color: var(--color-light-pink)
-}
-
-.color-light-pink::after, .color-light-pink::before {
-    border-top-color: var(--color-light-pink);
-    border-bottom-color: var(--color-light-pink)
-}
-  
-.color-light-pink:hover {
-    color: var(--color-light-pink)
-}
-
-.hexagon-container a {
-    color: #e9ecef;
-    text-decoration: none;
-}
-
-
-
 
 #portfolio .portfolio-item {
     right: 0;
